@@ -9,9 +9,11 @@ html {
     padding: 0;
     background-color: #D9D4CE;
     width: 100%;
-    height: 4.2rem;
+    height: 67px;
     flex-shrink: 0;
-    position: relative;
+    position: fixed;
+    z-index:1;
+    top:0px;
 }
 
 .maintitle {
