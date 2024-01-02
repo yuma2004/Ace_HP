@@ -66,15 +66,14 @@ main.mainvisual img {
     writing-mode: vertical-rl;
     color: #ffffff;
     position: absolute;
-    right: 20px;
-    /* 右側に配置 */
-    top: 50%;
+    right: 30px;
+    top: 60%;
     /* 上部から中央に配置 */
     transform: translateY(-50%);
     /* 中央揃えのための調整 */
     font-size: 23px;
     width: 23px;
-    height: 610px;
+    height: 300px;
     line-height: 2em;
     /* ここで行の高さ（文字間隔）を設定 */
     font-family: kaisei HarunoUmi;
