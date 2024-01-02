@@ -12,8 +12,8 @@ html {
     height: 67px;
     flex-shrink: 0;
     position: fixed;
-    z-index:1;
-    top:0px;
+    z-index: 1;
+    top: 0px;
 }
 
 .maintitle {
@@ -129,9 +129,12 @@ main.mainvisual img {
 
 
 .container3 {
-    width: 100%;
-    height: 200px;
-    position: relative;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px ;
+    place-items: center; 
+    overflow: hidden;
 }
 
 
@@ -146,42 +149,41 @@ main.mainvisual img {
 .rotated-image4,
 .rotated-image5 {
     transform: rotate(-45deg);
-    width: 100px;
-    height: 100px;
-    position: absolute;
+    place-items: center;
+    width:150px;
+    height:150px;
 }
 
-.rotated-image4 {
-    left: 42px;
-    bottom: 50px;
-}
-
-.rotated-image5 {
-    right: 33px;
-    bottom: 50px;
+.rotated-image4 img,
+.rotated-image5 img {
+   width:150px;
+    height:150px;
+    
 }
 
 .text-Container {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 125px;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    margin: 0px 10px 0px 10px;
     border: 1px solid rgb(255, 255, 255);
-    /* 枠線を設定 */
+    background-color: #353536;
+}
 
+.text-Container p {
     color: #FFF;
-
     text-align: center;
     font-family: Kaisei HarunoUmi;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
 }
+
+
+
 
 .text {
     color: #FFF;
@@ -378,7 +380,7 @@ main.mainvisual img {
 
 .explanation-container {
     background-image: url("../images/Rectangle 25.jpg");
-    width:100%;
+    width: 100%;
 }
 
 
