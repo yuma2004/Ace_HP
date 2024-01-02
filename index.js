@@ -1,7 +1,6 @@
 function switchSectionHeader() {
     var section1 = document.getElementById('section1');
     var section2 = document.getElementById('section2');
-    var section3 = document.getElementById('section3');
     
     if (section1.style.display === 'none') {
         section1.style.display = 'block';
