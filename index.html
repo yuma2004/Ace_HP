@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,12 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <h1 class="maintitle">岐阜県名物 飛騨牛焼肉</h1>
-        <div class="menu-container" onclick="switchSection('section2')">
+        <div class="menu-container" onclick="switchSectionHeader()">
         </div>
     </header>
-    <div id="section1" class="section">
+    <div id="section1">
         <main class="mainvisual">
             <img src="images\メインビジュアル１.jpg">
             <div class="photo-text">
@@ -38,12 +39,59 @@
             </div>
         </div>
         <div class="container3">
-            <img class="rotated-image4" src="images\Rectangle 3.jpg">
-            <img class="rotated-image5" src="images\Rectangle 4.jpg">
+            <img class="rotated-image4" src="images\Rectangle 3.jpg" onclick="switchSectionCouse()">
+            <img class="rotated-image5" src="images\Rectangle 4.jpg" onclick="switchSectionSingle()">
             <p>コース</p>
             <p>単品</p>
         </div>
-        <div class="text">
+        <div id="section3" style="display: none;">
+            <main>
+                <p class="course-menu">コースメニュー</p>
+                <div class="course-container">
+                    <div class="photo">
+                        <img src="images\Rectangle 17.jpg" alt="">
+                    </div>
+                    <div class="shape">
+                        <img src="images\Rectangle 3.jpg" alt="">
+                        <p>90分飲み放題付全18品[特別宴会コース]</p>
+                    </div>
+                </div>
+                <p class="price">価格 4000円</p>
+                <p class="explanation">カルビの王様である三角バラを使用した飛騨牛特上カルビなど、地元岐阜県の飛騨牛を贅沢に味わえるコース！上質なお肉とお酒をお腹いっぱいに楽しみたい人におすすめ！
+                </p>
+
+                <div class="course-container">
+                    <div class="shape">
+                        <img src="images\Rectangle 3.jpg" alt="">
+                        <p>90分飲み放題付全18品[4500円コース]</p>
+                    </div>
+                    <div class="photo">
+                        <img src="images\Rectangle 17.jpg" alt="">
+                    </div>
+                </div>
+                <p class="explanation">
+                    カルビの王様である三角バラを使用した飛騨牛特上カルビなど、地元岐阜県の飛騨牛を贅沢に味わえるコース！上質なお肉とお酒をお腹いっぱいに楽しみたい人におすすめ！その他にも、ハラミ、ホルモンや豚バラ、チョレギサラダ、生センマイなど豊富にそろったコースになります！
+                </p>
+                <div class="course-container">
+                    <div class="photo">
+                        <img src="images\Rectangle 17.jpg" alt="">
+                    </div>
+                    <div class="shape">
+                        <img src="images\Rectangle 3.jpg" alt="">
+                        <p>90分飲み放題付全18品[5000円コース]</p>
+                    </div>
+                </div>
+                <div class="explanation-container">
+                    <div class="explanation-special">
+                        <p>上質な食材を皆さまにお値打ちに楽しんで頂きたい。</p>
+                        <p>そんな店主の熱い想いが詰まった「90分飲み放題付き5000円コース」
+                            ご提供するメニューは全て店主おすすめ。使用する食材は、飛騨牛やハツツモの原種米、野菜などの岐阜県産にこだわっております。さらに生ビールやレモンサワーを含む120分飲み放題付き。高級で美味しい味ではなく、高級なのに安い。を目指した一品をエースでお楽しみください。
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="text" id="StoreInformation">
             <h3>店内情報</h3>
             <p>掘りごたつ個室(二名様×4卓)<br>
                 高級感のある落ち着いた雰囲気の個室でスタイリッシュなひと時をお過ごしください。
@@ -55,38 +103,48 @@
         <div class="shop-photo">
             <img src="images\店内_縦 1.jpg" alt="">
         </div>
-        <div class="text-syo-sai">
-            <span>席タイプ</span>
-            <span class="spacer"></span>
-            <span>掘りごたつ個室</span>
+
+
+
+        <div class="text" id="DetailedInformation">
+            <h3>詳細情報</h3>
+            <div class="text-syo-sai">
+
+                <span>席タイプ</span>
+                <span class="spacer"></span>
+                <span>掘りごたつ個室</span>
+            </div>
+            <div class="text-syo-sai">
+                <span>人数</span>
+                <span class="spacer"></span>
+                <span>最大24名様まで</span>
+            </div>
+            <div class="text-syo-sai">
+                <span>禁煙・喫煙</span>
+                <span class="spacer"></span>
+                <span>全席喫煙</span>
+            </div>
+            <div class="text-syo-sai">
+                <span>お電話</span>
+                <span class="spacer"></span>
+                <span>050-5494-5008</span>
+            </div>
+            <div class="text-Container2">
+                <span>住所</span>
+                <span>500-8843<br>
+                    岐阜県岐阜市住田町1-15-4 <br>
+                    駅元ビル2～3F
+                </span>
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3251.7816130089686!2d136.7545910765015!3d35.410663344788425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x6003a93773be07c3%3A0x18c44a3f47fec311!2z5bKQ6Zic55yM5bKQ6Zic5biC5qmL5pys55S677yR5LiB55uuIOWykOmYnOmnhQ!3m2!1d35.4095278!2d136.75646559999998!4m5!1s0x6003a987e515578d%3A0xe2412b506a7a691f!2z44CSNTAwLTg4NDMg5bKQ6Zic55yM5bKQ6Zic5biC5L2P55Sw55S677yR5LiB55uu77yR77yXIOODn-ODqeODjuODk-ODqyAx6ZqOIOODjeOCquWkp-ihhueEvOiCiSDjgqjjg7zjgrk!3m2!1d35.411786299999996!2d136.7575032!5e0!3m2!1sja!2sjp!4v1702096042501!5m2!1sja!2sjp"
+                    width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
-        <div class="text-syo-sai">
-            <span>人数</span>
-            <span class="spacer"></span>
-            <span>最大24名様まで</span>
-        </div>
-        <div class="text-syo-sai">
-            <span>禁煙・喫煙</span>
-            <span class="spacer"></span>
-            <span>全席喫煙</span>
-        </div>
-        <div class="text-syo-sai">
-            <span>お電話</span>
-            <span class="spacer"></span>
-            <span>050-5494-5008</span>
-        </div>
-        <div class="text-Container2">
-            <span>住所</span>
-            <span>500-8843<br>
-                岐阜県岐阜市住田町1-15-4 <br>
-                駅元ビル2～3F
-            </span>
-            <iframe class="map"
-                src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3251.7816130089686!2d136.7545910765015!3d35.410663344788425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x6003a93773be07c3%3A0x18c44a3f47fec311!2z5bKQ6Zic55yM5bKQ6Zic5biC5qmL5pys55S677yR5LiB55uuIOWykOmYnOmnhQ!3m2!1d35.4095278!2d136.75646559999998!4m5!1s0x6003a987e515578d%3A0xe2412b506a7a691f!2z44CSNTAwLTg4NDMg5bKQ6Zic55yM5bKQ6Zic5biC5L2P55Sw55S677yR5LiB55uu77yR77yXIOODn-ODqeODjuODk-ODqyAx6ZqOIOODjeOCquWkp-ihhueEvOiCiSDjgqjjg7zjgrk!3m2!1d35.411786299999996!2d136.7575032!5e0!3m2!1sja!2sjp!4v1702096042501!5m2!1sja!2sjp"
-                width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
+
+
+
         <div class="text-syo-sai">
             <span>アクセス</span>
             <span class="spacer"></span>
@@ -131,13 +189,18 @@
             </div>
         </div>
     </div>
-    <div id="section2" class="section">
-        <span>メニュー</span>
-        <span>店内情報</span>
-        <span>詳細情報</span>
-        <span>お問い合わせ</span>
-        <span>閉じる</span>
+    <div id="section2" style="display: none;">
+        <div class="menu">
+            <div class="menu-item" onclick="switchSectionMenu()">メニュー</div>
+            <div class="menu-item" onclick="switchSectionStoreInformation()">店内情報</div>
+            <div class="menu-item" onclick="switchSectionDetailedInformation()">詳細情報</div>
+            <div class="menu-item" onclick="switchSectionContactInformation()">お問い合わせ</div>
+            <button class="button" onclick="switchSectionHeader()">閉じる</button>
+        </div>
+        <div class="backgroud"></div>
     </div>
+
     <script src="index.js"></script>
 </body>
+
 </html>
