@@ -51,12 +51,31 @@ function switchSectionDetailedInformation() {
 }
 
 function switchSectionCouse() {
-    var section1 = document.getElementById('section1');
     var section3 = document.getElementById('section3');
+    var section4 = document.getElementById('section4');
+
+    if (section4.style.display === 'block') {
+        section4.style.display = 'none';
+    }
 
     if (section3.style.display === 'none') {
         section3.style.display = 'block';
     } else {
         section3.style.display = 'none';
+    }
+}
+
+function switchSectionSingle() {
+    var section3 = document.getElementById('section3');
+    var section4 = document.getElementById('section4');
+
+    if (section3.style.display === 'block') {
+        section3.style.display = 'none';
+    }
+
+    if (section4.style.display === 'none') {
+        section4.style.display = 'block';
+    } else {
+        section4.style.display = 'none';
     }
 }
