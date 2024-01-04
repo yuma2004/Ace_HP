@@ -1,27 +1,57 @@
-function switchSectionHeader() {
-    var section1 = document.getElementById('section1');
-    var section2 = document.getElementById('section2');
+// 関数switchSectionHeaderの置き換え
+
+// function switchSectionHeader() {
+//     var section1 = document.getElementById('section1');
+//     var section2 = document.getElementById('section2');
     
-    if (section1.style.display === 'none') {
-        section1.style.display = 'block';
-        section2.style.display = 'none';
-    } else {
-        section1.style.display = 'none';
+//     if (section1.style.display === 'none') {
+//         section1.style.display = 'block';
+//         section2.style.display = 'none';
+//     } else {
+//         section1.style.display = 'none';
+//         section2.style.display = 'block';
+//     }
+// }
+
+function switchSectionHeader() {
+    var section2 = document.getElementById('section2');
+
+    if (section2.style.display === 'none') {
         section2.style.display = 'block';
+        section2.classList.add('showWithAnimation');
+    } else {
+        section2.style.display = 'none';
+        section2.classList.remove('showWithAnimation');
     }
 }
 
-function switchSectionMenu() {
-    var section1 = document.getElementById('section1');
-    var section2 = document.getElementById('section2');
+// function switchSectionMenu() {
+//     var section1 = document.getElementById('section1');
+//     var section2 = document.getElementById('section2');
     
-    if (section1.style.display === 'none') {
-        section1.style.display = 'block';
-        section2.style.display = 'none';
-    } else {
-        section1.style.display = 'none';
-        section2.style.display = 'block';
-    }
+//     if (section1.style.display === 'none') {
+//         section1.style.display = 'block';
+//         section2.style.display = 'none';
+//     } else {
+//         section1.style.display = 'none';
+//         section2.style.display = 'block';
+//     }
+
+//     // ID 'StoreInformation' を持つ要素を取得
+//     var element = document.getElementById("メニュー");
+
+//     // その要素へスクロール
+//     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+//     // スクロール完了後に少し上にオフセット
+//     window.setTimeout(function() {
+//         window.scrollBy(0, 0);
+//     }, 600); // 500ミリ秒後にスクロールを調整
+// }
+
+function switchSectionMenu() {
+    var section2 = document.getElementById('section2');    
+    section2.style.display = 'none';
 
     // ID 'StoreInformation' を持つ要素を取得
     var element = document.getElementById("メニュー");
@@ -36,18 +66,34 @@ function switchSectionMenu() {
 }
 
 
-function switchSectionStoreInformation() {
-    var section1 = document.getElementById('section1');
-    var section2 = document.getElementById('section2');
+// function switchSectionStoreInformation() {
+//     var section1 = document.getElementById('section1');
+//     var section2 = document.getElementById('section2');
     
-    if (section1.style.display === 'none') {
-        section1.style.display = 'block';
-        section2.style.display = 'none';
-    } else {
-        section1.style.display = 'none';
-        section2.style.display = 'block';
-    }
+//     if (section1.style.display === 'none') {
+//         section1.style.display = 'block';
+//         section2.style.display = 'none';
+//     } else {
+//         section1.style.display = 'none';
+//         section2.style.display = 'block';
+//     }
 
+//     // ID 'StoreInformation' を持つ要素を取得
+//     var element = document.getElementById("StoreInformation");
+
+//     // その要素へスクロール
+//     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+//     // スクロール完了後に少し上にオフセット
+//     window.setTimeout(function() {
+//         window.scrollBy(0, 0);
+//     }, 600); // 500ミリ秒後にスクロールを調整
+// }
+
+function switchSectionStoreInformation() {
+    var section2 = document.getElementById('section2');
+    section2.style.display = 'none';
+    
     // ID 'StoreInformation' を持つ要素を取得
     var element = document.getElementById("StoreInformation");
 
@@ -60,17 +106,33 @@ function switchSectionStoreInformation() {
     }, 600); // 500ミリ秒後にスクロールを調整
 }
 
-function switchSectionDetailedInformation() {
-    var section1 = document.getElementById('section1');
-    var section2 = document.getElementById('section2');
+// function switchSectionDetailedInformation() {
+//     var section1 = document.getElementById('section1');
+//     var section2 = document.getElementById('section2');
     
-    if (section1.style.display === 'none') {
-        section1.style.display = 'block';
-        section2.style.display = 'none';
-    } else {
-        section1.style.display = 'none';
-        section2.style.display = 'block';
-    }
+//     if (section1.style.display === 'none') {
+//         section1.style.display = 'block';
+//         section2.style.display = 'none';
+//     } else {
+//         section1.style.display = 'none';
+//         section2.style.display = 'block';
+//     }
+
+//     // ID 'StoreInformation' を持つ要素を取得
+//     var element = document.getElementById("DetailedInformation");
+
+//     // その要素へスクロール
+//     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+//     // スクロール完了後に少し上にオフセット
+//     window.setTimeout(function() {
+//         window.scrollBy(0, 0);
+//     }, 600); // 500ミリ秒後にスクロールを調整
+// }
+
+function switchSectionDetailedInformation() {
+    var section2 = document.getElementById('section2');
+    section2.style.display = 'none';
 
     // ID 'StoreInformation' を持つ要素を取得
     var element = document.getElementById("DetailedInformation");
