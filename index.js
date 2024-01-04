@@ -138,13 +138,13 @@ function switchSectionSingle() {
     }
 }
 
-document.getElementById("image").addEventListener("mouseover", function () {
-    document.getElementById("text").style.transform = "scale(1.5)";
-});
+// document.getElementById("image").addEventListener("mouseover", function () {
+//     document.getElementById("text").style.transform = "scale(1.5)";
+// });
 
-document.getElementById("image").addEventListener("mouseout", function () {
-    document.getElementById("text").style.transform = "scale(1)";
-});
+// document.getElementById("image").addEventListener("mouseout", function () {
+//     document.getElementById("text").style.transform = "scale(1)";
+// });
 
 
 
