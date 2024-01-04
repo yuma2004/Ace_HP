@@ -12,21 +12,23 @@ html {
     height: 67px;
     flex-shrink: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     top: 0px;
 }
 
-/* 追加 */
 #section2 {
     margin: 0;
     padding: 0;
-    background-color: rgba(100, 100, 100, 0.6); /* 赤色の半透明 */
+    background-color: rgba(100, 100, 100, 0.9);
+    /* 赤色の半透明 */
     width: 100%;
     flex-shrink: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: -40px;
 }
+
+
 
 .menu {
     width: 100%;
@@ -54,7 +56,16 @@ html {
     line-height: normal;
 }
 
-.menu-container {
+.fade {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.openbtn1 {
     position: absolute;
     top: 0;
     right: 0;
@@ -66,9 +77,10 @@ html {
 }
 
 /*ボタン内側*/
-.menu-container span{
+.openbtn1 span {
     display: inline-block;
-    transition: all .4s;/*アニメーションの設定*/
+    transition: all .4s;
+    /*アニメーションの設定*/
     position: absolute;
     left: 14px;
     height: 2px;
@@ -77,39 +89,70 @@ html {
     width: 70%;
 }
 
-.menu-container span:nth-of-type(1) {
-    top:14px;
-    left: 50%; /* 左から50%の位置に設定 */
-    transform: translate(-50%, -50%); /* 中央に配置するための調整 */
+.openbtn1 span:nth-of-type(1) {
+    top: 14px;
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
 }
 
-.menu-container span:nth-of-type(2) {
-    top:22px;
-    left: 50%; /* 左から50%の位置に設定 */
-    transform: translate(-50%, -50%); /* 中央に配置するための調整 */
+.openbtn1 span:nth-of-type(2) {
+    top: 22px;
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
 }
 
-.menu-container span:nth-of-type(3) {
-    top:30px;
-    left: 50%; /* 左から50%の位置に設定 */
-    transform: translate(-50%, -50%); /* 中央に配置するための調整 */
+.openbtn1 span:nth-of-type(3) {
+    top: 30px;
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
 }
 
-.menu-container p {
+.openbtn1.active span:nth-of-type(1) {
+    top: 15px;
+    left: 22px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3) {
+    top: 27px;
+    left: 22px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 40%;
+}
+
+
+.openbtn1 p {
     color: #FFF;
     position: absolute;
     top: 45px;
-    left: 50%; /* 左から50%の位置に設定 */
-    transform: translate(-50%, -50%); /* 中央に配置するための調整 */
+    left: 50%;
+    /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置するための調整 */
 }
 
 .logo-image {
     position: absolute;
-  top: 80px;      /* これにより、コンテナの左上隅に配置されます */
-  left: 20px;
-  width: 100px; /* オーバーレイ画像のサイズを調整 */
-  height: 100px;
-  border-radius: 50%
+    top: 80px;
+    /* これにより、コンテナの左上隅に配置されます */
+    left: 20px;
+    width: 70px;
+    /* オーバーレイ画像のサイズを調整 */
+    height: 70px;
+    border-radius: 25%;
+    z-index: 2;
 }
 
 .mainvisual {
@@ -234,8 +277,8 @@ html {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px ;
-    place-items: center; 
+    grid-template-rows: 200px;
+    place-items: center;
     overflow: hidden;
 }
 
@@ -251,15 +294,15 @@ html {
 .rotated-image5 {
     transform: rotate(-45deg);
     place-items: center;
-    width:150px;
-    height:150px;
+    width: 150px;
+    height: 150px;
 }
 
 .rotated-image4 img,
 .rotated-image5 img {
-   width:150px;
-    height:150px;
-    
+    width: 150px;
+    height: 150px;
+
 }
 
 .text-Container {
@@ -463,11 +506,21 @@ html {
     color: #FFF;
 }
 
+/* デフォルトスタイル */
 .course-shape {
-    width: 135px;
+    width: 100px;
+    /* 400px未満の場合のデフォルトの幅 */
     height: 120px;
     position: relative;
 }
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 400px) {
+    .course-shape {
+        width: 130px;
+    }
+}
+
 
 .course-shape img {
     width: 100%;
@@ -479,7 +532,7 @@ html {
 
 .course-shape p {
     position: absolute;
-    top: 32%;
+    top: 23%;
     /* 要素をshapeの上辺に沿わせる */
     left: 50%;
     /* 要素を左右中央に配置する */
@@ -492,7 +545,18 @@ html {
     text-align: center;
     /* テキストを中央揃えにする */
     color: #000;
-    font-size: 30px;
+    font-size: 26px;
+}
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 400px) {
+    .course-shape p {
+        top: 32%;
+        /* 要素をshapeの上辺に沿わせる */
+        left: 50%;
+        /* 要素を左右中央に配置する */
+        font-size: 30px;
+    }
 }
 
 .shape-2 {
@@ -557,17 +621,6 @@ html {
     background-size: auto 100%;
 }
 
-/* 以下削除 */
-/* メニューのスタイル */
-/* .menu {
-    width: 100%;
-    /* メニューの幅 */
-    /* height: 100%;
-    overflow: hidden;
-    color: #FFF;
-    margin-top: 30%;
-} */
-
 /* メニュー項目のスタイル */
 .menu-item {
     padding: 10px 20px;
@@ -575,7 +628,7 @@ html {
     text-align: center;
     /* 中央揃え */
     margin: top 20px;
-    ;
+    font-size: 20px;
 }
 
 /* メニュー項目をホバーしたときのスタイル */
@@ -627,8 +680,8 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     /* 要素の幅を画面全体にする場合 */
-    /* height: 316px; */
-    /* 高さを指定 */
+/* height: 316px; */
+/* 高さを指定 */
 /* } */
 
 
@@ -675,7 +728,7 @@ p {
     text-align: center;
     /* テキストを中央揃えにする */
     font-size: 15px;
-    
+
 }
 
 .right-photo {
@@ -700,8 +753,10 @@ p {
     color: #FFFFFF;
     position: absolute;
     top: 10%;
-    right: 50%; /* left を right に変更 */
-    transform: translateX(50%); /* -50% を 50% に変更 */
+    right: 50%;
+    /* left を right に変更 */
+    transform: translateX(50%);
+    /* -50% を 50% に変更 */
     padding: 5px 10px;
     width: 100%;
     text-align: center;
@@ -727,6 +782,7 @@ p {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -736,6 +792,24 @@ p {
 .showWithAnimation {
     animation: dropAndFade 1s ease forwards;
 }
+
+/* アニメーションcss */
+@keyframes riseAndFade {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.hideWithAnimation {
+    animation: riseAndFade 0.5s ease forwards;
+}
+
 
 .text {
     font-size: 16px;

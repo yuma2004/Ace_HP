@@ -1,151 +1,109 @@
-// 関数switchSectionHeaderの置き換え
-
-// function switchSectionHeader() {
-//     var section1 = document.getElementById('section1');
-//     var section2 = document.getElementById('section2');
-    
-//     if (section1.style.display === 'none') {
-//         section1.style.display = 'block';
-//         section2.style.display = 'none';
-//     } else {
-//         section1.style.display = 'none';
-//         section2.style.display = 'block';
-//     }
-// }
-
 function switchSectionHeader() {
     var section2 = document.getElementById('section2');
+    var text1 = document.getElementById('menu-button');
+    var text2 = document.getElementById('close-button');
 
-    if (section2.style.display === 'none') {
+    // Toggle the 'hidden' class to switch the visibility
+    text1.classList.toggle('hidden');
+    text2.classList.toggle('hidden');
+
+    if (section2.style.display === 'none' || section2.style.display === '') {
         section2.style.display = 'block';
         section2.classList.add('showWithAnimation');
+        section2.classList.remove('hideWithAnimation');
     } else {
-        section2.style.display = 'none';
         section2.classList.remove('showWithAnimation');
+        section2.classList.add('hideWithAnimation');
+        setTimeout(function () {
+            section2.style.display = 'none';
+        }, 200); // 0.2秒後にdisplayをnoneに設定
     }
 }
 
-// function switchSectionMenu() {
-//     var section1 = document.getElementById('section1');
-//     var section2 = document.getElementById('section2');
-    
-//     if (section1.style.display === 'none') {
-//         section1.style.display = 'block';
-//         section2.style.display = 'none';
-//     } else {
-//         section1.style.display = 'none';
-//         section2.style.display = 'block';
-//     }
-
-//     // ID 'StoreInformation' を持つ要素を取得
-//     var element = document.getElementById("メニュー");
-
-//     // その要素へスクロール
-//     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-//     // スクロール完了後に少し上にオフセット
-//     window.setTimeout(function() {
-//         window.scrollBy(0, 0);
-//     }, 600); // 500ミリ秒後にスクロールを調整
-// }
-
 function switchSectionMenu() {
-    var section2 = document.getElementById('section2');    
-    section2.style.display = 'none';
+    var section2 = document.getElementById('section2');
+    var text1 = document.getElementById('menu-button');
+    var text2 = document.getElementById('close-button');
+
+    // ハンバーガー変化
+    $(".openbtn1").toggleClass('active');
+
+    // Toggle the 'hidden' class to switch the visibility
+    text1.classList.toggle('hidden');
+    text2.classList.toggle('hidden');
+
+    section2.classList.add('hideWithAnimation');
+    setTimeout(function () {
+        section2.style.display = 'none';
+    }, 200); // 0.2秒後にdisplayをnoneに設定
 
     // ID 'StoreInformation' を持つ要素を取得
     var element = document.getElementById("メニュー");
 
     // その要素へスクロール
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // スクロール完了後に少し上にオフセット
-    window.setTimeout(function() {
-        window.scrollBy(0, 0);
-    }, 600); // 500ミリ秒後にスクロールを調整
+    element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 }
-
-
-// function switchSectionStoreInformation() {
-//     var section1 = document.getElementById('section1');
-//     var section2 = document.getElementById('section2');
-    
-//     if (section1.style.display === 'none') {
-//         section1.style.display = 'block';
-//         section2.style.display = 'none';
-//     } else {
-//         section1.style.display = 'none';
-//         section2.style.display = 'block';
-//     }
-
-//     // ID 'StoreInformation' を持つ要素を取得
-//     var element = document.getElementById("StoreInformation");
-
-//     // その要素へスクロール
-//     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-//     // スクロール完了後に少し上にオフセット
-//     window.setTimeout(function() {
-//         window.scrollBy(0, 0);
-//     }, 600); // 500ミリ秒後にスクロールを調整
-// }
 
 function switchSectionStoreInformation() {
     var section2 = document.getElementById('section2');
-    section2.style.display = 'none';
-    
+
+    var text1 = document.getElementById('menu-button');
+    var text2 = document.getElementById('close-button');
+
+    // ハンバーガー変化
+    $(".openbtn1").toggleClass('active');
+
+    // Toggle the 'hidden' class to switch the visibility
+    text1.classList.toggle('hidden');
+    text2.classList.toggle('hidden');
+
+    section2.classList.add('hideWithAnimation');
+    setTimeout(function () {
+        section2.style.display = 'none';
+    }, 200); // 0.2秒後にdisplayをnoneに設定
+
     // ID 'StoreInformation' を持つ要素を取得
     var element = document.getElementById("StoreInformation");
 
     // その要素へスクロール
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // スクロール完了後に少し上にオフセット
-    window.setTimeout(function() {
-        window.scrollBy(0, 0);
-    }, 600); // 500ミリ秒後にスクロールを調整
+    element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 }
-
-// function switchSectionDetailedInformation() {
-//     var section1 = document.getElementById('section1');
-//     var section2 = document.getElementById('section2');
-    
-//     if (section1.style.display === 'none') {
-//         section1.style.display = 'block';
-//         section2.style.display = 'none';
-//     } else {
-//         section1.style.display = 'none';
-//         section2.style.display = 'block';
-//     }
-
-//     // ID 'StoreInformation' を持つ要素を取得
-//     var element = document.getElementById("DetailedInformation");
-
-//     // その要素へスクロール
-//     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-//     // スクロール完了後に少し上にオフセット
-//     window.setTimeout(function() {
-//         window.scrollBy(0, 0);
-//     }, 600); // 500ミリ秒後にスクロールを調整
-// }
 
 function switchSectionDetailedInformation() {
     var section2 = document.getElementById('section2');
-    section2.style.display = 'none';
+    var text1 = document.getElementById('menu-button');
+    var text2 = document.getElementById('close-button');
+
+    // ハンバーガー変化
+    $(".openbtn1").toggleClass('active');
+
+    // Toggle the 'hidden' class to switch the visibility
+    text1.classList.toggle('hidden');
+    text2.classList.toggle('hidden');
+
+
+    section2.classList.add('hideWithAnimation');
+    setTimeout(function () {
+        section2.style.display = 'none';
+    }, 200); // 0.2秒後にdisplayをnoneに設定
 
     // ID 'StoreInformation' を持つ要素を取得
     var element = document.getElementById("DetailedInformation");
 
     // その要素へスクロール
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // スクロール完了後に少し上にオフセット
-    window.setTimeout(function() {
-        window.scrollBy(0, 0);
-    }, 600); // 500ミリ秒後にスクロールを調整
+    element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 }
 
+// コースbutton
 function switchSectionCouse() {
     var section3 = document.getElementById('section3');
     var section4 = document.getElementById('section4');
@@ -162,7 +120,6 @@ function switchSectionCouse() {
         section3.classList.remove('showWithAnimation');
     }
 }
-
 
 function switchSectionSingle() {
     var section3 = document.getElementById('section3');
@@ -181,10 +138,10 @@ function switchSectionSingle() {
     }
 }
 
-document.getElementById("image").addEventListener("mouseover", function() {
+document.getElementById("image").addEventListener("mouseover", function () {
     document.getElementById("text").style.transform = "scale(1.5)";
 });
 
-document.getElementById("image").addEventListener("mouseout", function() {
+document.getElementById("image").addEventListener("mouseout", function () {
     document.getElementById("text").style.transform = "scale(1)";
 });
