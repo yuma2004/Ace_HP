@@ -57,20 +57,20 @@ html {
 }
 
 .menu-container span:nth-of-type(1) {
-  top:14px;
-  left: 50%; /* 左から50%の位置に設定 */
+    top:14px;
+    left: 50%; /* 左から50%の位置に設定 */
     transform: translate(-50%, -50%); /* 中央に配置するための調整 */
 }
 
 .menu-container span:nth-of-type(2) {
-  top:22px;
-  left: 50%; /* 左から50%の位置に設定 */
+    top:22px;
+    left: 50%; /* 左から50%の位置に設定 */
     transform: translate(-50%, -50%); /* 中央に配置するための調整 */
 }
 
 .menu-container span:nth-of-type(3) {
-  top:30px;
-  left: 50%; /* 左から50%の位置に設定 */
+    top:30px;
+    left: 50%; /* 左から50%の位置に設定 */
     transform: translate(-50%, -50%); /* 中央に配置するための調整 */
 }
 
@@ -175,7 +175,6 @@ main.mainvisual img {
     place-items: center; 
     overflow: hidden;
 }
-
 
 .container2 {
     display: flex;
@@ -367,8 +366,8 @@ main.mainvisual img {
 }
 
 .shape {
-    width: 150px;
-    height: 140px;
+    width: 135px;
+    height: 120px;
     position: relative;
 }
 
@@ -382,7 +381,7 @@ main.mainvisual img {
 
 .shape p {
     position: absolute;
-    top: 10%;
+    top: 25%;
     /* 要素をshapeの上辺に沿わせる */
     left: 50%;
     /* 要素を左右中央に配置する */
@@ -390,10 +389,42 @@ main.mainvisual img {
     /* 要素の幅の半分だけ左に移動させる */
     padding: 5px 10px;
     /* テキストの周りに余白を設定する */
-    width: 80%;
+    width: 100%;
     /* 必要に応じて調整 */
     text-align: center;
     /* テキストを中央揃えにする */
+    color: #FFF;
+}
+
+.shape-2 {
+    width: 135px;
+    height: 120px;
+    position: relative;
+}
+
+.shape-2 img {
+    width: 100%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+}
+
+.shape-2 p {
+    position: absolute;
+    top: 25%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 50%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 5px 10px;
+    /* テキストの周りに余白を設定する */
+    width: 100%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #000;
 }
 
 .price {
@@ -413,7 +444,7 @@ main.mainvisual img {
     font-family: 'Kaisei HarunoUmi';
     color: #FFF;
     text-align: center;
-    margin: 0.3rem 3rem 0.3rem 3rem;
+    margin: 0.3rem 2rem 0.3rem 2rem;
     padding: 5px
 }
 
