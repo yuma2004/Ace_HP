@@ -145,3 +145,36 @@ document.getElementById("image").addEventListener("mouseover", function () {
 document.getElementById("image").addEventListener("mouseout", function () {
     document.getElementById("text").style.transform = "scale(1)";
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // ロゴ要素を正しく取得していることを確認
+    var logo = document.getElementById('logo');
+    if (!logo) {
+        console.error('ロゴ要素が見つかりません。IDを確認してください。');
+        return; // ロゴ要素がない場合、ここで処理を終了
+    }
+
+    // トランジションが終了したことを検知
+    logo.addEventListener('transitionend', function (event) {
+        // トランジションが完了したプロパティがfilterであることを確認
+        if (event.propertyName === 'filter') {
+            // トランジションが完了したらスプラッシュ画面を非表示にする
+            var splashScreen = document.getElementById('splash-screen');
+            if (splashScreen) {
+                splashScreen.style.display = 'none';
+            } else {
+                console.error('スプラッシュ画面の要素が見つかりません。IDを確認してください。');
+            }
+        }
+    });
+
+    // 一定時間後に彩度を上げる
+    setTimeout(function () {
+        logo.style.filter = 'saturate(1)';
+    }, 1000);
+});
+

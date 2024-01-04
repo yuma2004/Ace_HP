@@ -4,6 +4,25 @@ html {
     background-color: #000;
 }
 
+
+ /* スプラッシュ画面用の追加スタイル */
+ .splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* ページ全体を覆う */
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* 白背景 */
+    z-index: 5; /* ヘッダーより上に表示 */
+}
+
+#logo {
+    filter: saturate(0); /* 最初は彩度0で表示 */
+    transition: filter 2s ease-in-out; /* トランジションの時間と種類 */
+
+}
+
 .header {
     margin: 0;
     padding: 0;
@@ -772,13 +791,6 @@ p {
 .onedan {
     color: white;
 }
-
-
-
-
-
-
-
 
 /* アニメーションcss */
 @keyframes dropAndFade {
