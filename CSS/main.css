@@ -454,3 +454,94 @@ main.mainvisual img {
     height: 316px;
     /* 高さを指定 */
 }
+
+/* 以下単品 */
+
+p {
+    font-family: 'Kaisei HarunoUmi';
+}
+
+.course-menu {
+    color: #FFF;
+    margin: 15px;
+    width: 40%;
+}
+
+.course-container {
+    display: flex;
+
+}
+
+.left-photo {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+
+.right-shape {
+    width: 150px;
+    height: 140px;
+    position: relative;
+}
+
+.right-shape img {
+    width: 100%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+}
+
+.right-shape p {
+    color: #FFFFFF;
+    position: absolute;
+    top: 10%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 50%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 5px 10px;
+    /* テキストの周りに余白を設定する */
+    width: 100%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+}
+
+.right-photo {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+
+.left-shape {
+    width: 150px;
+    height: 140px;
+    position: relative;
+}
+
+.left-shape img {
+    width: 100%;
+    height: auto;
+    transform: rotate(45deg);
+}
+
+.left-shape p {
+    color: #FFFFFF;
+    position: absolute;
+    top: 10%;
+    right: 50%; /* left を right に変更 */
+    transform: translateX(50%); /* -50% を 50% に変更 */
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.hidagyu img {
+    width: 100%;
+}
+
+.onedan {
+    color: white;
+}
