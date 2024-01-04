@@ -776,6 +776,10 @@ p {
 
 
 
+
+
+
+
 /* アニメーションcss */
 @keyframes dropAndFade {
     from {
@@ -818,4 +822,9 @@ p {
 
 .image-container:hover .text {
     font-size: 24px;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
 }
