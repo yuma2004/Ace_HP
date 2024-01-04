@@ -52,16 +52,24 @@
             </div>
         </div>
         <div class="container3">
-            <img class="rotated-image4" src="images\Rectangle 3.jpg" onclick="switchSectionCouse()">
-            <img class="rotated-image5" src="images\Rectangle 4.jpg" onclick="switchSectionSingle()">
-            <p>コース</p>
-            <p>単品</p>
+            <div class="course-shape">
+                <img class="rotated-image4" src="images\Rectangle 3.jpg" onclick="switchSectionCouse()">
+                <p onclick="switchSectionCouse()">コース</p>
+            </div>
+            <div class="course-shape">
+                <img class="rotated-image5" src="images\Rectangle 4.jpg" onclick="switchSectionSingle()">
+                <p onclick="switchSectionSingle()">単品</p>
+            </div>
+
+
+
         </div>
 
         <div id="section3" style="display: none;">
             <main>
-                <p class="course-menu">コースメニュー</p>
-
+                <div class="course-menu">
+                    <p>コースメニュー</p>
+                </div>
                 <div class="container3">
                     <div class="photo">
                         <img src="images\Rectangle 17.jpg" alt="">
@@ -111,7 +119,9 @@
 
         <div id="section4" style="display: none;">
             <main>
-                <p class="course-menu">単品</p>
+                <div class="course-menu">
+                    <p>単品</p>
+                </div>
                 <div class="container3">
                     <div class="left-photo">
                         <img src="..\images\Rectangle 17.jpg" alt="">

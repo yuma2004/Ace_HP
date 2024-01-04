@@ -392,8 +392,13 @@ html {
 /* 基本スタイル (320px〜480px) */
 .course-menu {
     color: #FFF;
-    margin: 15px;
-    width: 40%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.course-menu p {
+    left: 15%;
+    font-size: 24px;
 }
 
 .photo {
@@ -436,6 +441,38 @@ html {
     text-align: center;
     /* テキストを中央揃えにする */
     color: #FFF;
+}
+
+.course-shape {
+    width: 135px;
+    height: 120px;
+    position: relative;
+}
+
+.course-shape img {
+    width: 100%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+}
+
+.course-shape p {
+    position: absolute;
+    top: 32%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 50%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 5px 10px;
+    /* テキストの周りに余白を設定する */
+    width: 100%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #000;
+    font-size: 30px;
 }
 
 .shape-2 {
@@ -493,6 +530,11 @@ html {
 .explanation-container {
     background-image: url("../images/Rectangle 25.jpg");
     width: 100%;
+}
+
+.onedan {
+    background-image: url("../images/メインビジュアル１.jpg");
+    background-size: auto 100%;
 }
 
 
@@ -615,10 +657,12 @@ p {
     /* 要素の幅の半分だけ左に移動させる */
     padding: 5px 10px;
     /* テキストの周りに余白を設定する */
-    width: 100%;
+    width: 140%;
     /* 必要に応じて調整 */
     text-align: center;
     /* テキストを中央揃えにする */
+    font-size: 15px;
+    
 }
 
 .right-photo {
