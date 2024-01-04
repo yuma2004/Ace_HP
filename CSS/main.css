@@ -82,6 +82,14 @@ html {
     transform: translate(-50%, -50%); /* 中央に配置するための調整 */
 }
 
+.logo-image {
+    position: absolute;
+  top: 80px;      /* これにより、コンテナの左上隅に配置されます */
+  left: 20px;
+  width: 100px; /* オーバーレイ画像のサイズを調整 */
+  height: 100px;
+  border-radius: 50%
+}
 
 .mainvisual {
     display: block;
@@ -92,7 +100,7 @@ html {
     padding: 0;
 }
 
-main.mainvisual img {
+.main-image {
     /* セレクタの修正 */
     display: block;
     width: 100%;
@@ -105,14 +113,48 @@ main.mainvisual img {
     writing-mode: vertical-rl;
     color: #ffffff;
     position: absolute;
-    right: 30px;
+    right: 20%;
     top: 60%;
     /* 上部から中央に配置 */
     transform: translateY(-50%);
     /* 中央揃えのための調整 */
-    font-size: 23px;
+    font-size: 25px;
     width: 23px;
-    height: 300px;
+    height: 500px;
+    line-height: 2em;
+    /* ここで行の高さ（文字間隔）を設定 */
+    font-family: kaisei HarunoUmi;
+}
+
+.photo-text2 {
+    writing-mode: vertical-rl;
+    color: #ffffff;
+    position: absolute;
+    right: 10%;
+    top: 75%;
+    /* 上部から中央に配置 */
+    transform: translateY(-50%);
+    /* 中央揃えのための調整 */
+    font-size: 25px;
+    width: 23px;
+    height: 500px;
+    line-height: 2em;
+    /* ここで行の高さ（文字間隔）を設定 */
+    font-family: kaisei HarunoUmi;
+}
+
+.photo-text3 {
+    writing-mode: vertical-rl;
+    color: #ffffff;
+    position: absolute;
+    left: 12%;
+    top: 100%;
+    /* 上部から中央に配置 */
+    transform: translateY(-50%);
+    /* 中央揃えのための調整 */
+    font-size: 25px;
+    width: 23px;
+    height: 500px;
     line-height: 2em;
     /* ここで行の高さ（文字間隔）を設定 */
     font-family: kaisei HarunoUmi;
