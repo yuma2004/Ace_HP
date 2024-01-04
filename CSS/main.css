@@ -397,7 +397,6 @@ html {
 }
 
 .course-menu p {
-    left: 15%;
     font-size: 24px;
 }
 
@@ -615,17 +614,6 @@ p {
     font-family: 'Kaisei HarunoUmi';
 }
 
-.course-menu {
-    color: #FFF;
-    margin: 15px;
-    width: 40%;
-}
-
-.course-container {
-    display: flex;
-
-}
-
 .left-photo {
     width: 150px;
     height: 150px;
@@ -695,9 +683,40 @@ p {
 }
 
 .hidagyu img {
-    width: 100%;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .onedan {
     color: white;
+}
+
+
+
+
+/* アニメーションcss */
+@keyframes dropAndFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.showWithAnimation {
+    animation: dropAndFade 1s ease forwards;
+}
+
+.text {
+    font-size: 16px;
+    transition: font-size 0.5s ease;
+}
+
+.image-container:hover .text {
+    font-size: 24px;
 }
