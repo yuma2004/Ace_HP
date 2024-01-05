@@ -363,8 +363,8 @@ html {
     line-height: normal;
 }
 
-/* 画面幅が330px以上の場合のスタイル */
-@media (min-width: 380px) {
+/* 画面幅が350px以上の場合のスタイル */
+@media (min-width: 350px) {
     .text-Container p {
         font-size: 20px;
     }
@@ -508,10 +508,19 @@ html {
     font-size: 24px;
 }
 
-.photo {
-    width: 150px;
-    height: 150px;
-    margin: 15px;
+.photo img {
+    width: 130px;
+    height: auto;
+    margin: 10px;
+}
+
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 350px) {
+    .photo img {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+    }
 }
 
 .course-container {
@@ -520,35 +529,109 @@ html {
 }
 
 .shape {
-    width: 135px;
+    width: 130px;
     height: 120px;
     position: relative;
+    right: 0%;
 }
 
 .shape img {
-    width: 100%;
+    width: 70%;
     /* 親要素に合わせて画像を伸ばす */
     height: auto;
     /* 画像の元のアスペクト比を維持する */
     transform: rotate(45deg);
+    position: relative;
+    /* 位置指定を相対的に設定 */
+    left: 13px;
+    top: 10px;
 }
 
 .shape p {
     position: absolute;
     top: 25%;
     /* 要素をshapeの上辺に沿わせる */
-    left: 50%;
+    left: 45%;
     /* 要素を左右中央に配置する */
     transform: translateX(-50%);
     /* 要素の幅の半分だけ左に移動させる */
-    padding: 5px 10px;
+    padding: 0px 0px;
     /* テキストの周りに余白を設定する */
     width: 100%;
     /* 必要に応じて調整 */
     text-align: center;
     /* テキストを中央揃えにする */
     color: #FFF;
+    font-size: 13px;
 }
+
+/* 画面幅が330px以上の場合のスタイル */
+@media (min-width: 330px) {
+    .shape img {
+        width: 90%;
+        /* 位置指定を相対的に設定 */
+        left: 8px;
+        top: 0px;
+    }
+
+    .shape p {
+        left: 50%;
+        font-size: 16px;
+    }
+}
+
+.shape-2 {
+    width: 130px;
+    height: 120px;
+    position: relative;
+    left: 0%;
+}
+
+.shape-2 img {
+    width: 70%;
+    /* 親要素に合わせて画像を伸ばす */
+    height: auto;
+    /* 画像の元のアスペクト比を維持する */
+    transform: rotate(45deg);
+    position: relative;
+    /* 位置指定を相対的に設定 */
+    left: 23px;
+    top:10px;
+}
+
+.shape-2 p {
+    position: absolute;
+    top: 26%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 54%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 0px 0px;
+    /* テキストの周りに余白を設定する */
+    width: 100%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #000;
+    font-size: 13px;
+}
+
+/* 画面幅が330px以上の場合のスタイル */
+@media (min-width: 330px) {
+    .shape-2 img {
+        width: 90%;
+        /* 位置指定を相対的に設定 */
+        right: 8px;
+        top: 0px;
+    }
+
+    .shape-2 p {
+        left: 62%;
+        font-size: 16px;
+    }
+}
+
 
 /* デフォルトスタイル */
 .course-shape {
@@ -603,36 +686,7 @@ html {
     }
 }
 
-.shape-2 {
-    width: 135px;
-    height: 120px;
-    position: relative;
-}
 
-.shape-2 img {
-    width: 100%;
-    /* 親要素に合わせて画像を伸ばす */
-    height: auto;
-    /* 画像の元のアスペクト比を維持する */
-    transform: rotate(45deg);
-}
-
-.shape-2 p {
-    position: absolute;
-    top: 25%;
-    /* 要素をshapeの上辺に沿わせる */
-    left: 50%;
-    /* 要素を左右中央に配置する */
-    transform: translateX(-50%);
-    /* 要素の幅の半分だけ左に移動させる */
-    padding: 5px 10px;
-    /* テキストの周りに余白を設定する */
-    width: 100%;
-    /* 必要に応じて調整 */
-    text-align: center;
-    /* テキストを中央揃えにする */
-    color: #000;
-}
 
 .price {
     font-family: 'Kaisei HarunoUmi';
