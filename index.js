@@ -176,7 +176,7 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    // effect: "coverflow",
+    effect: "fade",
 
     // Speed of the transition animation (in milliseconds)
     speed: 1000,
@@ -204,3 +204,8 @@ const swiper = new Swiper('.swiper', {
         hide: true,
     },
 });
+
+// タップでも移り変わるように関数追加
+function swiping() {
+    swiper.slideNext();
+}
