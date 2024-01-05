@@ -206,8 +206,9 @@ html {
         color: rgb(0, 0, 0);
     }
 }
+
 @media screen and (min-width: 320px) and (max-width: 379px) {
-    .color-font2{
+    .color-font2 {
         color: rgb(0, 0, 0);
     }
 }
@@ -449,16 +450,16 @@ html {
     width: 100%;
     height: 800px;
     /* padding-top: 75%; 比率を4:3に固定 */
-  }
+}
 
-  /* Google Mapのiframe */
+/* Google Mapのiframe */
 .map iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
+}
 
 .text-Container3 {
     display: flex;
@@ -992,4 +993,17 @@ p {
 .swiper {
     width: 100%;
     height: auto;
+}
+
+#instagram-logo {
+    position: fixed;
+    /* 要素を画面に固定 */
+    right: 10px;
+    /* 右端から10pxの位置に */
+    bottom: 10px;
+    /* 下端から10pxの位置に */
+    width: 50px;
+    /* ロゴのサイズ調整（必要に応じて） */
+    height: 50px;
+    /* ロゴのサイズ調整（必要に応じて） */
 }
