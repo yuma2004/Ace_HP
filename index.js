@@ -103,10 +103,29 @@ function switchSectionDetailedInformation() {
     });
 }
 
+
 // コースbutton
 function switchSectionCouse() {
     var section3 = document.getElementById('section3');
     var section4 = document.getElementById('section4');
+    var course = document.getElementById('course');
+    var single = document.getElementById('single');
+
+    course.classList.toggle('chr-expanded');
+
+    if (single.classList.contains('chr-expanded')) {
+        single.classList.toggle('chr-expanded');
+    }
+
+    var courseImage = document.getElementById('course-image');
+    var singleImage = document.getElementById('single-image');
+
+    courseImage.classList.toggle('img-rotation');
+
+    if (singleImage.classList.contains('img-rotation')) {
+        singleImage.classList.toggle('img-rotation');
+    }
+
 
     if (section4.style.display === 'block') {
         section4.style.display = 'none';
@@ -124,6 +143,23 @@ function switchSectionCouse() {
 function switchSectionSingle() {
     var section3 = document.getElementById('section3');
     var section4 = document.getElementById('section4');
+    var course = document.getElementById('course');
+    var single = document.getElementById('single');
+    
+    single.classList.toggle('chr-expanded');
+
+    if (course.classList.contains('chr-expanded')) {
+        course.classList.toggle('chr-expanded');
+    }
+
+    var courseImage = document.getElementById('course-image');
+    var singleImage = document.getElementById('single-image');
+
+    singleImage.classList.toggle('img-rotation');
+
+    if (courseImage.classList.contains('img-rotation')) {
+        courseImage.classList.toggle('img-rotation');
+    }
 
     if (section3.style.display === 'block') {
         section3.style.display = 'none';
@@ -183,7 +219,7 @@ const swiper = new Swiper('.swiper', {
 
     // Autoplay
     autoplay: {
-        delay: 6000,
+        delay: 5000,
         disableOnInteraction: false,
     },
 

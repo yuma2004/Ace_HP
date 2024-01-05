@@ -596,7 +596,7 @@ html {
     position: relative;
     /* 位置指定を相対的に設定 */
     left: 23px;
-    top:10px;
+    top: 10px;
 }
 
 .shape-2 p {
@@ -654,7 +654,7 @@ html {
     /* 親要素に合わせて画像を伸ばす */
     height: auto;
     /* 画像の元のアスペクト比を維持する */
-    transform: rotate(45deg);
+    transform: rotate(0deg);
 }
 
 .course-shape p {
@@ -686,7 +686,41 @@ html {
     }
 }
 
+p.chr-expanded {
+    position: absolute;
+    top: 18%;
+    /* 要素をshapeの上辺に沿わせる */
+    left: 50%;
+    /* 要素を左右中央に配置する */
+    transform: translateX(-50%);
+    /* 要素の幅の半分だけ左に移動させる */
+    padding: 0px 0px;
+    /* テキストの周りに余白を設定する */
+    width: 120%;
+    /* 必要に応じて調整 */
+    text-align: center;
+    /* テキストを中央揃えにする */
+    color: #000;
+    font-size: 37px;
+    transition: font-size 0.5s ease;
+}
 
+/* 画面幅が400px以上の場合のスタイル */
+@media (min-width: 400px) {
+    p.chr-expanded {
+        top: 28%;
+        /* 要素をshapeの上辺に沿わせる */
+        left: 50%;
+        /* 要素を左右中央に配置する */
+        font-size: 45px;
+        transition: font-size 0.5s ease;
+    }
+}
+
+img.img-rotation {
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+} 
 
 .price {
     font-family: 'Kaisei HarunoUmi';
