@@ -201,6 +201,19 @@ html {
     padding: 0;
 }
 
+@media screen and (min-width: 380px) {
+    .color-font {
+        color: rgb(0, 0, 0);
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 379px) {
+    .color-font2{
+        color: rgb(0, 0, 0);
+    }
+}
+
+
+
 .main-image {
     /* セレクタの修正 */
     display: block;
@@ -416,7 +429,7 @@ html {
 .text-Container2 {
     display: flex;
     width: 100%;
-    height: 300px;
+    height: 100px;
     flex-direction: column;
     justify-content: top;
     flex-shrink: 0;
@@ -430,6 +443,22 @@ html {
     color: #FFF;
     margin: 5px 20px 5px 20px;
 }
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    /* padding-top: 75%; 比率を4:3に固定 */
+  }
+
+  /* Google Mapのiframe */
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 .text-Container3 {
     display: flex;
@@ -722,7 +751,7 @@ p.chr-expanded {
 img.img-rotation {
     transform: rotate(45deg);
     transition: transform 0.5s ease;
-} 
+}
 
 .price {
     font-family: 'Kaisei HarunoUmi';
