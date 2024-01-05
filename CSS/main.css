@@ -997,13 +997,8 @@ p {
 
 #instagram-logo {
     position: fixed;
-    /* 要素を画面に固定 */
     right: 10px;
-    /* 右端から10pxの位置に */
     bottom: 10px;
-    /* 下端から10pxの位置に */
     width: 50px;
-    /* ロゴのサイズ調整（必要に応じて） */
     height: 50px;
-    /* ロゴのサイズ調整（必要に応じて） */
 }
