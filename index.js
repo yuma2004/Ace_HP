@@ -178,6 +178,15 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     // effect: "coverflow",
 
+    // Speed of the transition animation (in milliseconds)
+    speed: 1000,
+
+    // Autoplay
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+    },
+
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
