@@ -204,10 +204,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
 });
 
+
+// ハンバーガーアニメーション
 $(".openbtn1").click(function () {
     $(this).toggleClass('active');
 });
 
+
+// スライダー
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     // direction: 'vertical',
