@@ -249,3 +249,9 @@ const swiper = new Swiper('.swiper', {
 function swiping() {
     swiper.slideNext();
 }
+
+// インスタフッタ
+function switchSectionContactChat() {
+    window.location.href = "https://www.instagram.com/yakiniku_ace_hiroki/";
+}
+
