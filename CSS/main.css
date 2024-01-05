@@ -61,7 +61,7 @@ html {
     margin-top: 40%;
 }
 
-/* 画面幅が400px以上の場合のスタイル */
+/* 画面幅が380px以上の場合のスタイル */
 @media (min-width: 380px) {
     .menu {
         margin-top: 30%;
@@ -357,13 +357,18 @@ html {
     color: #FFF;
     text-align: center;
     font-family: Kaisei HarunoUmi;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-
+/* 画面幅が330px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .text-Container p {
+        font-size: 20px;
+    }
+}
 
 
 .text {
@@ -486,8 +491,10 @@ html {
     /* 高さを指定 */
 }
 
-/* タブレット向けのスタイル */
-@media (min-width: 768px) {}
+
+/* なにこれ */
+/* タブレット向けのスタイル
+@media (min-width: 768px) {} */
 
 /* コースメニュー */
 /* 基本スタイル (320px〜480px) */
