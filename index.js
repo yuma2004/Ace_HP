@@ -138,16 +138,6 @@ function switchSectionSingle() {
     }
 }
 
-// document.getElementById("image").addEventListener("mouseover", function () {
-//     document.getElementById("text").style.transform = "scale(1.5)";
-// });
-
-// document.getElementById("image").addEventListener("mouseout", function () {
-//     document.getElementById("text").style.transform = "scale(1)";
-// });
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -178,3 +168,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
 });
 
+$(".openbtn1").click(function () {
+    $(this).toggleClass('active');
+});
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    // effect: "coverflow",
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true,
+    },
+});
