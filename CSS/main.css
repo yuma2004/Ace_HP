@@ -33,7 +33,7 @@ html {
     padding: 0;
     background-color: #D9D4CE;
     width: 100%;
-    height: 67px;
+    height: 70px;
     flex-shrink: 0;
     position: fixed;
     z-index: 4;
@@ -79,7 +79,7 @@ html {
     color: #000;
     text-align: center;
     font-family: Kaisei HarunoUmi;
-    font-size: 20px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -182,13 +182,13 @@ html {
 
 .logo-image {
     position: absolute;
-    top: 80px;
+    /* top: 80px; */
     /* これにより、コンテナの左上隅に配置されます */
-    left: 20px;
+    /* left: 20px; */
     width: 70px;
     /* オーバーレイ画像のサイズを調整 */
     height: 70px;
-    border-radius: 25%;
+    /* border-radius: 25%; */
     z-index: 2;
 }
 
@@ -791,13 +791,14 @@ html {
     }
 }
 
-
+/* 回転するアニメーション */
 .course-shape img {
     width: 100%;
     /* 親要素に合わせて画像を伸ばす */
     height: auto;
     /* 画像の元のアスペクト比を維持する */
-    transform: rotate(0deg);
+    /* ()の中身で回転する角度をいじれる */
+    transform: rotate(135deg);
     transition: transform 0.2s ease;
 
 }
@@ -1128,4 +1129,5 @@ p {
     bottom: 10px;
     width: 50px;
     height: 50px;
+    z-index: 1;
 }
