@@ -262,3 +262,6 @@ function switchSectionContactChat() {
     window.location.href = "https://www.instagram.com/yakiniku_ace_hiroki/";
 }
 
+document.getElementById('callButton').addEventListener('click', function() {
+    window.location.href = 'tel:050-5494-5008';
+});
