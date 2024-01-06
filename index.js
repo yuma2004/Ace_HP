@@ -145,7 +145,7 @@ function switchSectionSingle() {
     var section4 = document.getElementById('section4');
     var course = document.getElementById('course');
     var single = document.getElementById('single');
-    
+
     single.classList.toggle('chr-expanded');
 
     if (course.classList.contains('chr-expanded')) {
@@ -201,6 +201,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // 一定時間後に彩度を上げる
     setTimeout(function () {
         logo.style.filter = 'saturate(1)';
+        // Loadingテキストのアニメーションを開始
+        var loadingText = document.getElementById('loading-text');
+        if (loadingText) {
+            loadingText.style.animation = 'wave-animation 2s infinite';
+        } else {
+            console.error('Loadingテキスト要素が見つかりません。IDを確認してください。');
+        }
     }, 1000);
 });
 
