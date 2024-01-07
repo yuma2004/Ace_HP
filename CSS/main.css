@@ -1154,8 +1154,10 @@ img.img-rotation {
 }
 
 .explanation-container {
-    background-image: url("../images/Rectangle 25.jpg");
+    background-image: url("../images/Rectangle 32.png");
     width: 100%;
+    height: auto;
+    background-size: 100% auto;
 }
 
 .onedan {
@@ -1468,3 +1470,4 @@ p {
 #loading-text span:nth-child(10) {
     animation-delay: 0.9s;
 }
+
