@@ -18,12 +18,12 @@
 </head>
 
 <body>
-    <div id="splash-screen" class="splash-container">
+    <!-- <div id="splash-screen" class="splash-container">
         <img id="logo" src="images\ace_big.png" alt="ロゴ">
         <div id="loading-text">
             <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span><span>.</span><span>.</span><span>.</span>
         </div>
-    </div>
+    </div> -->
     <a href="https://www.instagram.com/yakiniku_ace_hiroki/">
         <div id="instagram-logo">
             <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
@@ -70,7 +70,6 @@
             <span></span>
             <p id="menu-button" class="fade">MENU</p>
             <p id="close-button" class="fade hidden">CLOSE</p>
-
         </div>
     </header>
     <div id="section1">
@@ -135,12 +134,24 @@
     <div class="container3">
         <!-- ここまで -->
         <div class="course-shape">
-            <img class="rotated-image4" src="images\Rectangle 3.jpg" onclick="switchSectionCouse()" id="course-image">
-            <p onclick="switchSectionCouse()" id="course">コース</p>
+            <div class="course-button" id="courseButton">
+                <div class="course-push" id="coursePush" onclick="switchSectionCourse()"></div>
+                <div class="course-shadow" id="courseShadow"></div>
+            </div>
+            <!-- <img class="rotated-image4" src="images\Rectangle 3.jpg" id="course-image"> -->
+            <p id="course">コース</p>
+            <p class="push-chr" onclick="switchSectionCourse()" id="coursePushChr">push</p>
+            <p class="push-chr" onclick="switchSectionCourse()" style="display: none;" id="coursePushedChr">close</p>
         </div>
         <div class="course-shape">
-            <img class="rotated-image5" src="images\Rectangle 4.jpg" onclick="switchSectionSingle()" id="single-image">
-            <p onclick="switchSectionSingle()" id="single">単品</p>
+            <div class="single-button" id="singleButton">
+                <div class="single-push" id="singlePush" onclick="switchSectionSingle()"></div>
+                <div class="single-shadow" id="singleShadow"></div>
+            </div>
+            <!-- <img class="rotated-image5" src="images\Rectangle 4.jpg" onclick="switchSectionSingle()" id="single-image"> -->
+            <p id="single">単品</p>
+            <p class="push-chr" onclick="switchSectionSingle()" id="singlePushChr">push</p>
+            <p class="push-chr" onclick="switchSectionSingle()" style="display: none;" id="singlePushedChr">close</p>
         </div>
     </div>
     <div id="section3" style="display: none;">

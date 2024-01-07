@@ -791,16 +791,17 @@ html {
 }
 
 
+
 /* デフォルトスタイル */
 .course-shape {
-    width: 100px;
+    width: 97px;
     /* 400px未満の場合のデフォルトの幅 */
     height: 120px;
     position: relative;
 }
 
-/* 画面幅が400px以上の場合のスタイル */
-@media (min-width: 400px) {
+/* 画面幅が380px以上の場合のスタイル */
+@media (min-width: 380px) {
     .course-shape {
         width: 130px;
     }
@@ -813,14 +814,14 @@ html {
     height: auto;
     /* 画像の元のアスペクト比を維持する */
     /* ()の中身で回転する角度をいじれる */
-    transform: rotate(135deg);
+    transform: rotate(0deg);
     transition: transform 0.2s ease;
 
 }
 
 .course-shape p {
     position: absolute;
-    top: 23%;
+    top: 0%;
     /* 要素をshapeの上辺に沿わせる */
     left: 50%;
     /* 要素を左右中央に配置する */
@@ -833,23 +834,24 @@ html {
     text-align: center;
     /* テキストを中央揃えにする */
     color: #000;
-    font-size: 26px;
+    font-size: 20px;
+    z-index: 2;
 }
 
 /* 画面幅が400px以上の場合のスタイル */
-@media (min-width: 400px) {
+@media (min-width: 380px) {
     .course-shape p {
-        top: 32%;
+        top: -3%;
         /* 要素をshapeの上辺に沿わせる */
         left: 50%;
         /* 要素を左右中央に配置する */
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 
 p.chr-expanded {
     position: absolute;
-    top: 18%;
+    top: 0%;
     /* 要素をshapeの上辺に沿わせる */
     left: 50%;
     /* 要素を左右中央に配置する */
@@ -862,19 +864,252 @@ p.chr-expanded {
     text-align: center;
     /* テキストを中央揃えにする */
     color: #000;
-    font-size: 37px;
+    font-size: 26px;
     transition: font-size 0.5s ease;
 }
 
 /* 画面幅が400px以上の場合のスタイル */
-@media (min-width: 400px) {
+@media (min-width: 380px) {
     p.chr-expanded {
-        top: 28%;
+        top: -1%;
         /* 要素をshapeの上辺に沿わせる */
         left: 50%;
         /* 要素を左右中央に配置する */
-        font-size: 45px;
+        font-size: 32px;
         transition: font-size 0.5s ease;
+    }
+}
+
+p.push-chr {
+    font-size: 16px;
+    top: 44%;
+}
+
+@media (min-width: 380px) {
+    p.push-chr {
+        font-size: 22px;
+        top: 55%;
+    }
+}
+
+/* ボタンデザイン */
+.course-button {
+    position: relative;
+    width: 98px;
+    height: 98px;
+    background-color: #892424;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.course-push {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    top: 40px;
+    left: 40px;
+    background-color: #EA8080;
+    z-index: 2;
+}
+
+.course-shadow {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    top: -13px;
+    left: 40px;
+    background-color: #000000;
+    z-index: 1;
+}
+
+.single-button {
+    position: relative;
+    width: 98px;
+    height: 98px;
+    background-color: #C3C3C3;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.single-push {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    top: 40px;
+    left: 40px;
+    background-color: #FFF;
+    z-index: 2;
+}
+
+.single-shadow {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    top: -13px;
+    left: 40px;
+    background-color: #000000;
+    z-index: 1;
+}
+
+/* 画面幅が380px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .course-button {
+        width: 130px;
+        height: 130px;
+    }
+
+    .course-push {
+        width: 70px;
+        height: 70px;
+        top: 50px;
+        left: 50px;
+    }
+
+    .course-shadow {
+        width: 75px;
+        height: 75px;
+        top: -20px;
+        left: 50px;
+    }
+
+    .single-button {
+        width: 130px;
+        height: 130px;
+    }
+
+    .single-push {
+        width: 70px;
+        height: 70px;
+        top: 50px;
+        left: 50px;
+    }
+
+    .single-shadow {
+        width: 75px;
+        height: 75px;
+        top: -20px;
+        left: 50px;
+    }
+}
+
+
+/* ボタン押された時の挙動 */
+.course-button-pushed {
+    width: 98px;
+    height: 98px;
+    background-color: #EA8080;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.course-push-pushed {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    top: 40px;
+    left: 40px;
+    background-color: #892424;
+    z-index: 2;
+}
+
+.course-shadow-pushed {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    top: -16px;
+    left: 37px;
+    background-color: #5d2727;
+    z-index: 1;
+}
+
+
+.single-button-pushed {
+    position: relative;
+    width: 98px;
+    height: 98px;
+    background-color: #FFF;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.single-push-pushed {
+    position: relative;
+    width: 53px;
+    height: 53px;
+    top: 40px;
+    left: 40px;
+    background-color: #C3C3C3;
+    z-index: 2;
+}
+
+.single-shadow-pushed {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    top: -16px;
+    left: 37px;
+    background-color: #000000;
+    z-index: 1;
+}
+
+/* 画面幅が380px以上の場合のスタイル */
+@media (min-width: 380px) {
+    .course-button-pushed {
+        width: 130px;
+        height: 130px;
+        background-color: #EA8080;
+        transform: rotate(45deg);
+        z-index: 0;
+    }
+
+    .course-push-pushed {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        top: 50px;
+        left: 50px;
+        background-color: #892424;
+        z-index: 2;
+    }
+
+    .course-shadow-pushed {
+        position: relative;
+        width: 75px;
+        height: 75px;
+        top: -25px;
+        left: 45px;
+        background-color: #5d2727;
+        z-index: 1;
+    }
+
+
+    .single-button-pushed {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        background-color: #FFF;
+        transform: rotate(45deg);
+        z-index: 0;
+    }
+
+    .single-push-pushed {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        top: 50px;
+        left: 50px;
+        background-color: #C3C3C3;
+        z-index: 2;
+    }
+
+    .single-shadow-pushed {
+        position: relative;
+        width: 75px;
+        height: 75px;
+        top: -25px;
+        left: 45px;
+        background-color: #000000;
+        z-index: 1;
     }
 }
 

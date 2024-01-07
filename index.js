@@ -105,26 +105,44 @@ function switchSectionDetailedInformation() {
 
 
 // コースbutton
-function switchSectionCouse() {
+function switchSectionCourse() {
+    switchCourseButton()
+    
     var section3 = document.getElementById('section3');
     var section4 = document.getElementById('section4');
     var course = document.getElementById('course');
     var single = document.getElementById('single');
 
+    var coursePushChr = document.getElementById('coursePushChr');
+    var coursePushedChr = document.getElementById('coursePushedChr');
+    var singlePushChr = document.getElementById('singlePushChr');
+    var singlePushedChr = document.getElementById('singlePushedChr');
+
     course.classList.toggle('chr-expanded');
+
+    if (course.classList.contains('chr-expanded')) {
+        coursePushChr.style.display = 'none';
+        coursePushedChr.style.display = 'block';
+    } else {
+        coursePushChr.style.display = 'block';
+        coursePushedChr.style.display = 'none';
+    }
 
     if (single.classList.contains('chr-expanded')) {
         single.classList.toggle('chr-expanded');
+        switchSingleButton();
+        singlePushChr.style.display = 'block';
+        singlePushedChr.style.display = 'none';
     }
 
-    var courseImage = document.getElementById('course-image');
-    var singleImage = document.getElementById('single-image');
+    // var courseImage = document.getElementById('course-image');
+    // var singleImage = document.getElementById('single-image');
 
-    courseImage.classList.toggle('img-rotation');
+    // courseImage.classList.toggle('img-rotation');
 
-    if (singleImage.classList.contains('img-rotation')) {
-        singleImage.classList.toggle('img-rotation');
-    }
+    // if (singleImage.classList.contains('img-rotation')) {
+    //     singleImage.classList.toggle('img-rotation');
+    // }
 
 
     if (section4.style.display === 'block') {
@@ -140,26 +158,55 @@ function switchSectionCouse() {
     }
 }
 
+function switchCourseButton() {
+    var courseButton = document.getElementById('courseButton');
+    var coursePush = document.getElementById('coursePush');
+    var courseShadow = document.getElementById('courseShadow');
+    
+    courseButton.classList.toggle('course-button-pushed');
+    coursePush.classList.toggle('course-push-pushed');
+    courseShadow.classList.toggle('course-shadow-pushed');
+
+}
+
 function switchSectionSingle() {
+    switchSingleButton()
+
     var section3 = document.getElementById('section3');
     var section4 = document.getElementById('section4');
     var course = document.getElementById('course');
     var single = document.getElementById('single');
 
+    var coursePushChr = document.getElementById('coursePushChr');
+    var coursePushedChr = document.getElementById('coursePushedChr');
+    var singlePushChr = document.getElementById('singlePushChr');
+    var singlePushedChr = document.getElementById('singlePushedChr');
+
     single.classList.toggle('chr-expanded');
+
+    if (single.classList.contains('chr-expanded')) {
+        singlePushChr.style.display = 'none';
+        singlePushedChr.style.display = 'block';
+    } else {
+        singlePushChr.style.display = 'block';
+        singlePushedChr.style.display = 'none';
+    }
 
     if (course.classList.contains('chr-expanded')) {
         course.classList.toggle('chr-expanded');
+        switchCourseButton();
+        coursePushChr.style.display = 'block';
+        coursePushedChr.style.display = 'none';
     }
 
-    var courseImage = document.getElementById('course-image');
-    var singleImage = document.getElementById('single-image');
+    // var courseImage = document.getElementById('course-image');
+    // var singleImage = document.getElementById('single-image');
 
-    singleImage.classList.toggle('img-rotation');
+    // singleImage.classList.toggle('img-rotation');
 
-    if (courseImage.classList.contains('img-rotation')) {
-        courseImage.classList.toggle('img-rotation');
-    }
+    // if (courseImage.classList.contains('img-rotation')) {
+    //     courseImage.classList.toggle('img-rotation');
+    // }
 
     if (section3.style.display === 'block') {
         section3.style.display = 'none';
@@ -174,7 +221,16 @@ function switchSectionSingle() {
     }
 }
 
+function switchSingleButton() {
+    var singleButton = document.getElementById('singleButton');
+    var singlePush = document.getElementById('singlePush');
+    var singleShadow = document.getElementById('singleShadow');
+    
+    singleButton.classList.toggle('single-button-pushed');
+    singlePush.classList.toggle('single-push-pushed');
+    singleShadow.classList.toggle('single-shadow-pushed');
 
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     // ロゴ要素を正しく取得していることを確認
